@@ -24,12 +24,21 @@ st.markdown("""
         text-align: center;
     }
     
-    /* Chat Message Bubbles */
+        /* Chat Message Bubbles */
     .stChatMessage {
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.9) !important; /* Thoda zyada solid white */
         border-radius: 20px;
         border: 1px solid #ff69b4;
         margin-bottom: 10px;
+        color: #333333 !important; /* Dark text jo saaf dikhega */
+    }
+
+    /* Message Text Color */
+    .stChatMessage p {
+        color: #000000 !important; /* Pura black text messages ke liye */
+        font-weight: 500;
+    }
+
     }
 
     /* Input Field Styling */
@@ -132,4 +141,5 @@ with st.sidebar:
     st.write("---")
     if st.button("Clear Chat Memory ❤️"):
         st.session_state.messages = []
+
         st.rerun()
